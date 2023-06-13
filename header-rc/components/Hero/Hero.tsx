@@ -72,7 +72,7 @@ const StyledAdditionalSubHeroContentContainer = styled.div`
 `;
 
 const Img = styled.img`
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 `;
