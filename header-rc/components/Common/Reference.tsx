@@ -3,7 +3,10 @@ import { COLOR, FONT_SIZE, FONT_WEIGHT } from "../../Theme";
 import { BiLink } from "react-icons/bi";
 import Link from "next/link";
 
-const StyledReference = styled.div`
+const StyledReference = styled.a<
+  Pick<IReference, "backgroundColor" | "borderRadius" | "color">
+>`
+  all: unset;
   background-color: ${(props) => props.backgroundColor || COLOR.WHITE};
   color: ${(props) => props.color || COLOR.BLUE};
   border-radius: ${(props) => props.borderRadius || "0px"};

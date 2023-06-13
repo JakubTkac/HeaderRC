@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { FONT_SIZE, FONT_WEIGHT } from "../../Theme";
+import { COLOR, FONT_SIZE, FONT_WEIGHT } from "../../Theme";
 import { JSX } from "react";
 
-const StyledDescription = styled.p`
+const StyledDescription = styled.p<Partial<IDescription>>`
   font-size: ${(props) => props.fontSize || FONT_SIZE.L};
   font-weight: ${(props) => props.fontWeight || FONT_WEIGHT.REGULAR};
+  text-align: center;
+  color: ${COLOR.BLACK};
   b {
     font-weight: ${FONT_WEIGHT.BOLDER};
   }
@@ -12,7 +14,7 @@ const StyledDescription = styled.p`
 
 interface IDescription {
   fontSize?: string;
-  fontWeight?: string;
+  fontWeight?: number;
   children: JSX.Element | JSX.Element[] | string;
 }
 

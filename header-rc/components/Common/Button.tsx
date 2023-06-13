@@ -13,7 +13,8 @@ interface IButton {
   fontSize?: string;
 }
 
-const StyledButton = styled.div<IButton>`
+const StyledButton = styled.button<Partial<IButton>>`
+  all: unset;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +26,7 @@ const StyledButton = styled.div<IButton>`
   font-size: ${(props) => props.fontSize || FONT_SIZE.XL};
   cursor: pointer;
   gap: 10px;
-  padding: 22.5px 1.5rem;
+  padding: 0 1.5rem;
   font-weight: ${FONT_WEIGHT.BOLDER};
   a {
     text-decoration: none;

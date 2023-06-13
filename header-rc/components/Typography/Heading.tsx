@@ -28,7 +28,7 @@ const StyledHeading = styled.h1`
 `;
 
 interface IHeadingProps {
-  children: JSX.Element | JSX.Element[] | string;
+  children: JSX.Element | JSX.Element[];
 }
 
 const Heading = ({ children }: IHeadingProps): JSX.Element => {

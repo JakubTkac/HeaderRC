@@ -11,14 +11,9 @@ const StyledBannerContent = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  h3 {
-    font-size: ${FONT_SIZE.L};
-    font-weight: ${FONT_WEIGHT.BOLDER};
-    color: ${COLOR.BLACK};
-  }
   @media (max-width: ${SCREENS.MD}) {
     flex-direction: column;
-    h3 {
+    p {
       text-align: center;
       margin-bottom: 1.5rem;
     }
@@ -41,7 +36,7 @@ const BannerContent = (): JSX.Element => {
   return (
     <StyledBannerContent>
       {/*<h3>Minim modi yet omnis nor quia so minima.</h3>*/}
-      <Description fontWeight={FONT_WEIGHT.BOLDER}>
+      <Description fontWeight={FONT_WEIGHT.BOLDER} fontSize={FONT_SIZE.L}>
         Minim modi yet omnis nor quia so minima.
       </Description>
       <StyledBannerLinks>

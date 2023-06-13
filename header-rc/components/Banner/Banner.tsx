@@ -14,7 +14,9 @@ const Banner = (): JSX.Element => {
   return (
     <StyledBannerContainer>
       <Heading>
-        Proident anim <b>nor nulla iste.</b>
+        <>
+          Proident anim <b>nor nulla iste.</b>
+        </>
       </Heading>
       <BannerContent />
     </StyledBannerContainer>
