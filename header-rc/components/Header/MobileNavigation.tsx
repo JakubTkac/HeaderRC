@@ -3,6 +3,7 @@ import { headerItems, IHeaderItems } from "./HeaderItems";
 import MobileHeaderItem from "./MobileHeaderItem";
 
 const StyledMobileNavigation = styled.nav`
+  z-index: 100;
   display: flex;
   width: 100%;
   position: absolute;

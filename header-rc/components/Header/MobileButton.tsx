@@ -5,6 +5,7 @@ import { IoClose, IoMenu } from "react-icons/io5";
 import MobileNavigation from "./MobileNavigation";
 
 const StyledMobileButton = styled.div`
+  z-index: 100;
   color: ${COLOR.WHITE};
   background-color: ${COLOR.BLUE};
   svg {
@@ -13,6 +14,7 @@ const StyledMobileButton = styled.div`
     font-size: 4rem;
     &:hover {
       color: ${COLOR.GRAY};
+      cursor: pointer;
     }
   }
 `;
