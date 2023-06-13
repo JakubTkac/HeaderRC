@@ -11,24 +11,24 @@ const StyledHeadingContainer = styled.div`
     margin: 3rem 0;
     margin-bottom: 1.5rem;
   }
-  h1 {
-    color: ${COLOR.BLUE};
-    font-size: ${FONT_SIZE.XXXL};
-  }
 `;
 
 const StyledHeading = styled.h1`
   font-weight: ${FONT_WEIGHT.REGULAR};
-`;
-const StyledBoldHeading = styled.h1`
-  font-weight: ${FONT_WEIGHT.BOLDEST};
+  color: ${COLOR.BLUE};
+  font-size: ${FONT_SIZE.XXXL};
+  text-align: center;
+  b {
+    font-weight: ${FONT_WEIGHT.BOLDEST};
+  }
 `;
 
 const Heading = () => {
   return (
     <StyledHeadingContainer>
-      <StyledHeading>Proident anim</StyledHeading>
-      <StyledBoldHeading> nor nulla iste.</StyledBoldHeading>
+      <StyledHeading>
+        Proident anim <b>nor nulla iste.</b>
+      </StyledHeading>
     </StyledHeadingContainer>
   );
 };

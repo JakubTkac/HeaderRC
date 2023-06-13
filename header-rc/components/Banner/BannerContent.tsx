@@ -18,6 +18,7 @@ const StyledBannerContent = styled.div`
   @media (max-width: ${SCREENS.MD}) {
     flex-direction: column;
     h3 {
+      text-align: center;
       margin-bottom: 1.5rem;
     }
   }
@@ -28,7 +29,11 @@ const StyledBannerLinks = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 17px;
+  @media (max-width: ${SCREENS.XS}) {
+    gap: 16px;
+  }
 `;
 
 const BannerContent = () => {
