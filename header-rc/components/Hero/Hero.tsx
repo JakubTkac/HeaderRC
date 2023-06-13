@@ -4,13 +4,21 @@ import { COLOR, SCREENS } from "../../Theme";
 import Description from "../Typography/Description";
 import Subheading from "../Typography/Subheading";
 import AdditionalInfo from "../Common/AdditionalInfo";
+import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 
 const StyledHeroContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+  margin-bottom: 3rem;
   @media (max-width: ${SCREENS.LG}) {
     flex-direction: column;
+  }
+  @media (max-width: ${SCREENS.MD}) {
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: ${SCREENS.XS}) {
+    margin-bottom: 0;
   }
 `;
 const StyledHeroFlex = styled.div`
@@ -63,6 +71,17 @@ const StyledAdditionalSubHeroContentContainer = styled.div`
   }
 `;
 
+const Img = styled.img`
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+`;
+
+const StyledImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
 const Hero = (): JSX.Element => {
   return (
     <StyledHeroContainer>
@@ -85,7 +104,9 @@ const Hero = (): JSX.Element => {
           <AdditionalInfo path={"/#"}>Ipsum Lorem</AdditionalInfo>
         </StyledSubHeroContentContainer>
         <div>
-          <StyledHeroImg img={"/Subhero.png"}></StyledHeroImg>
+          <StyledImageContainer>
+            <Img src="/Subhero.png" alt="subhero" />
+          </StyledImageContainer>
           <StyledAdditionalSubHeroContentContainer>
             <Reference
               title={"Ipsum Lorem"}

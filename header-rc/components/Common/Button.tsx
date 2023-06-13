@@ -11,6 +11,7 @@ interface IButton {
   icon?: JSX.Element;
   title: string;
   fontSize?: string;
+  height?: string;
 }
 
 const StyledButton = styled.button<Partial<IButton>>`
@@ -18,7 +19,7 @@ const StyledButton = styled.button<Partial<IButton>>`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 4.5rem;
+  height: ${(props) => props.height || "4.5rem"};
   border: 1px solid ${COLOR.BLUE};
   background-color: ${(props) => props.backgroundColor || COLOR.WHITE};
   color: ${(props) => props.color || COLOR.BLUE};
@@ -50,12 +51,14 @@ const Button: React.FC<IButton> = ({
   path,
   icon,
   title,
+  height,
 }) => {
   return (
     <StyledButton
       backgroundColor={backgroundColor}
       color={color}
       borderRadius={borderRadius}
+      height={height}
     >
       {icon && icon}
       <Link href={path}>{title}</Link>

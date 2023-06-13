@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import Banner from "../../components/Banner/Banner";
 import Main from "../../components/Layout/Main";
 import Hero from "../../components/Hero/Hero";
-import Head from "next/head";
+import PostPreviewContainer from "../../components/Post/PostPreviewContainer";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
         <Main>
           <Banner></Banner>
           <Hero></Hero>
+          <PostPreviewContainer></PostPreviewContainer>
         </Main>
       </Layout>
     </>

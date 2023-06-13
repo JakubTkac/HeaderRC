@@ -22,6 +22,7 @@ export const COLOR = {
   BACKGROUND: "#F9F9F9",
   BLUE: "#003057",
   GRAY: "#666666",
+  LIGHT_GRAY: "#F1F1F1",
   DARKER_GRAY: "#F5F5F5",
 };
 
