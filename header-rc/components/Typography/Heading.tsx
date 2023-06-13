@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLOR, FONT_SIZE, FONT_WEIGHT, SCREENS } from "../../Theme";
+import { JSX } from "react";
 
 const StyledHeadingContainer = styled.div`
   display: flex;
@@ -16,19 +17,24 @@ const StyledHeadingContainer = styled.div`
 const StyledHeading = styled.h1`
   font-weight: ${FONT_WEIGHT.REGULAR};
   color: ${COLOR.BLUE};
-  font-size: ${FONT_SIZE.XXXL};
+  font-size: ${FONT_SIZE.XXXXL};
   text-align: center;
   b {
     font-weight: ${FONT_WEIGHT.BOLDEST};
   }
+  @media (max-width: ${SCREENS.XS}) {
+    font-size: ${FONT_SIZE.XXXL};
+  }
 `;
 
-const Heading = () => {
+interface IHeadingProps {
+  children: JSX.Element | JSX.Element[] | string;
+}
+
+const Heading = ({ children }: IHeadingProps): JSX.Element => {
   return (
     <StyledHeadingContainer>
-      <StyledHeading>
-        Proident anim <b>nor nulla iste.</b>
-      </StyledHeading>
+      <StyledHeading>{children}</StyledHeading>
     </StyledHeadingContainer>
   );
 };

@@ -4,6 +4,7 @@ import Button from "../Common/Button";
 import { IoMailOutline } from "react-icons/io5";
 import { BiLink } from "react-icons/bi";
 import { MdOutlinePlace } from "react-icons/md";
+import Description from "../Typography/Description";
 
 const StyledBannerContent = styled.div`
   display: flex;
@@ -36,10 +37,13 @@ const StyledBannerLinks = styled.div`
   }
 `;
 
-const BannerContent = () => {
+const BannerContent = (): JSX.Element => {
   return (
     <StyledBannerContent>
-      <h3>Minim modi yet omnis nor quia so minima.</h3>
+      {/*<h3>Minim modi yet omnis nor quia so minima.</h3>*/}
+      <Description fontWeight={FONT_WEIGHT.BOLDER}>
+        Minim modi yet omnis nor quia so minima.
+      </Description>
       <StyledBannerLinks>
         <Button
           path={`/#`}

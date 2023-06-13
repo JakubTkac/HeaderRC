@@ -1,4 +1,4 @@
-import Heading from "../Heading/Heading";
+import Heading from "../Typography/Heading";
 import BannerContent from "./BannerContent";
 import styled from "styled-components";
 import { SCREENS } from "../../Theme";
@@ -10,10 +10,12 @@ const StyledBannerContainer = styled.div`
   }
 `;
 
-const Banner = () => {
+const Banner = (): JSX.Element => {
   return (
     <StyledBannerContainer>
-      <Heading />
+      <Heading>
+        Proident anim <b>nor nulla iste.</b>
+      </Heading>
       <BannerContent />
     </StyledBannerContainer>
   );

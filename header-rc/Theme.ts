@@ -26,7 +26,9 @@ export const COLOR = {
 };
 
 export const FONT_SIZE = {
-  XXXL: "48px",
+  XXXXL: "48px",
+  XXXL: "30px",
+  XXL: "24px",
   XL: "18px",
   L: "16px",
   M: "14px",

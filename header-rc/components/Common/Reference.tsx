@@ -1,31 +1,19 @@
 import styled from "styled-components";
 import { COLOR, FONT_SIZE, FONT_WEIGHT } from "../../Theme";
-import React from "react";
+import { BiLink } from "react-icons/bi";
 import Link from "next/link";
 
-interface IButton {
-  backgroundColor?: string;
-  color?: string;
-  borderRadius?: string;
-  path: string;
-  icon?: JSX.Element;
-  title: string;
-  fontSize?: string;
-}
-
-const StyledButton = styled.div<IButton>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 4.5rem;
-  border: 1px solid ${COLOR.BLUE};
+const StyledReference = styled.div`
   background-color: ${(props) => props.backgroundColor || COLOR.WHITE};
   color: ${(props) => props.color || COLOR.BLUE};
   border-radius: ${(props) => props.borderRadius || "0px"};
-  font-size: ${(props) => props.fontSize || FONT_SIZE.XL};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: ${FONT_SIZE.M};
   cursor: pointer;
   gap: 10px;
-  padding: 22.5px 1.5rem;
+  padding: 0.5rem 1rem;
   font-weight: ${FONT_WEIGHT.BOLDER};
   a {
     text-decoration: none;
@@ -36,30 +24,33 @@ const StyledButton = styled.div<IButton>`
   svg {
     font-size: 1.5em;
   }
-  &:hover {
-    background-color: ${COLOR.BLUE};
-    color: ${COLOR.WHITE};
-  }
 `;
 
-const Button: React.FC<IButton> = ({
+interface IReference {
+  path: string;
+  title: string;
+  color?: string;
+  backgroundColor?: string;
+  borderRadius?: string;
+}
+
+const Reference = ({
+  path,
+  title,
   backgroundColor,
   color,
   borderRadius,
-  path,
-  icon,
-  title,
-}) => {
+}: IReference): JSX.Element => {
   return (
-    <StyledButton
+    <StyledReference
       backgroundColor={backgroundColor}
       color={color}
       borderRadius={borderRadius}
     >
-      {icon && icon}
+      <BiLink></BiLink>
       <Link href={path}>{title}</Link>
-    </StyledButton>
+    </StyledReference>
   );
 };
 
-export default Button;
+export default Reference;

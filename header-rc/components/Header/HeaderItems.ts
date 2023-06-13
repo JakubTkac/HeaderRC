@@ -25,6 +25,7 @@ export const headerItems = [
           { title: "link1", path: "#" },
           { title: "link2", path: "#" },
           { title: "link3", path: "#" },
+          { title: "link333", path: "#" },
         ],
       },
 
@@ -34,6 +35,7 @@ export const headerItems = [
           { title: "link4", path: "#" },
           { title: "link5", path: "#" },
           { title: "link6", path: "#" },
+          { title: "link32", path: "#" },
         ],
       },
     ],
