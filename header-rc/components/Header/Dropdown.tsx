@@ -2,8 +2,10 @@ import styled from "styled-components";
 import { COLOR, FONT_SIZE, FONT_WEIGHT } from "../../Theme";
 import { IDropdown } from "./HeaderItems";
 import Link from "next/link";
+import { JSX } from "react";
 
 const StyledDropdown = styled.div`
+  z-index: 100;
   background-color: ${COLOR.BACKGROUND};
   height: auto;
   width: 100%;
@@ -24,7 +26,7 @@ const StyledDropdownColumn = styled.div`
   width: 435.5px;
   h3 {
     font-size: ${FONT_SIZE.M};
-    font-weight: ${FONT_WEIGHT.BOLD};
+    font-weight: ${FONT_WEIGHT.BOLDER};
     color: ${COLOR.BLACK};
     left: 0;
     top: 0;
@@ -41,6 +43,7 @@ const StyledLink = styled.li`
   display: flex;
   align-items: center;
   box-shadow: 0px -1px 0px 0px #f1f1f1 inset;
+  cursor: pointer;
   &:hover {
     background-color: ${COLOR.DARKER_GRAY};
     a {
@@ -49,6 +52,7 @@ const StyledLink = styled.li`
     }
   }
   a {
+    width: 100%;
     font-size: ${FONT_SIZE.M};
     font-weight: ${FONT_WEIGHT.REGULAR};
     text-decoration: none;
@@ -56,7 +60,7 @@ const StyledLink = styled.li`
   }
 `;
 
-const Dropdown = ({ dropdown }: { dropdown: IDropdown[] }) => {
+const Dropdown = ({ dropdown }: { dropdown: IDropdown[] }): JSX.Element => {
   return (
     <StyledDropdown>
       {dropdown.map((dropdownItem) => {

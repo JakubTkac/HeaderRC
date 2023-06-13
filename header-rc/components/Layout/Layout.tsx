@@ -5,7 +5,7 @@ import React, { JSX } from "react";
 const StyledLayout = styled.div`
   background-color: ${COLOR.BACKGROUND};
   height: 100vh;
-  width: 100vw;
+  //width: 100vw;
 `;
 
 interface ILayoutProps {
