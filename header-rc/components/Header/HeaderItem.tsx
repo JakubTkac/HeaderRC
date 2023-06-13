@@ -4,7 +4,7 @@ import { JSX, useState } from "react";
 import { IDropdown } from "./HeaderItems";
 import Dropdown from "./Dropdown";
 
-const StyledHeaderItem = styled.div`
+const StyledHeaderItem = styled.div<{ isOpened: boolean }>`
   display: flex;
   max-height: 4.5rem;
   color: ${COLOR.GRAY};
@@ -13,6 +13,11 @@ const StyledHeaderItem = styled.div`
   padding: 1.5rem;
   font-weight: ${FONT_WEIGHT.BOLDER};
   font-size: ${FONT_SIZE.XL};
+  background-color: ${(props) =>
+    props.isOpened ? COLOR.BACKGROUND : COLOR.WHITE};
+  color: ${(props) => (props.isOpened ? COLOR.BLUE : COLOR.GRAY)};
+  border-bottom: ${(props) =>
+    props.isOpened ? `5px solid ${COLOR.BLUE}` : "0"};
   &:hover {
     cursor: pointer;
     background-color: ${COLOR.BACKGROUND};
@@ -41,7 +46,7 @@ const HeaderItem = ({
         setOpen(false);
       }}
     >
-      <StyledHeaderItem>{title}</StyledHeaderItem>
+      <StyledHeaderItem isOpened={open}>{title}</StyledHeaderItem>
       {open && <Dropdown dropdown={dropdown}></Dropdown>}
     </div>
   );
